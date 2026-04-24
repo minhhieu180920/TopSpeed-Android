@@ -3,8 +3,6 @@
     <!-- Gesture sensitivity settings -->
     <dimen name="gesture_tap_tolerance">50dp</dimen>
     <dimen name="gesture_swipe_threshold">100dp</dimen>
-    <dimen name="gesture_double_tap_timeout">300ms</dimen>
-    <dimen name="gesture_long_press_timeout">500ms</dimen>
 
     <!-- Touch zones -->
     <integer name="touch_zone_left_width_percent">50</integer>

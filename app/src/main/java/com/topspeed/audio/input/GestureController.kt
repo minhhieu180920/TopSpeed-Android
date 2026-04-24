@@ -1,5 +1,7 @@
 package com.topspeed.audio.input
 
+import android.os.Handler
+import android.os.Looper
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
@@ -155,7 +157,7 @@ class GestureController(
                 // Detect 2-finger tap
                 if (pointerCount == 2) {
                     // Check if both fingers are tapping (not moving much)
-                    Handler(android.os.Looper.getMainLooper()).postDelayed({
+                    Handler(Looper.getMainLooper()).postDelayed({
                         if (pointerCount == 2 && !isSwiping) {
                             Log.d(TAG, "Two finger tap detected")
                             gestureListener.onTwoFingerTap()

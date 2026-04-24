@@ -59,7 +59,7 @@ class NetworkManager(
      */
     fun connect(serverUrl: String = ServerConfig.currentServerUrl) {
         baseUrl = serverUrl
-        ServerConfig.currentServerUrl = serverUrl
+        ServerConfig.setServerUrl(serverUrl)
 
         Log.i(TAG, "Connecting to server: $serverUrl")
 

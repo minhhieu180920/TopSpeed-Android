@@ -1,0 +1,3 @@
+C:/Users/MINH HIEU/Downloads/lap trinh abk/TopSpeed-Android/app/.cxx/Debug/6l4u66w2/arm64-v8a/CMakeFiles/topspeed.dir
+C:/Users/MINH HIEU/Downloads/lap trinh abk/TopSpeed-Android/app/.cxx/Debug/6l4u66w2/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/MINH HIEU/Downloads/lap trinh abk/TopSpeed-Android/app/.cxx/Debug/6l4u66w2/arm64-v8a/CMakeFiles/rebuild_cache.dir

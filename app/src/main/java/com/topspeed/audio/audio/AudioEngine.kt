@@ -45,9 +45,6 @@ class AudioEngine(private val context: Context) {
     // Volume listeners for UI updates
     var onVolumeChanged: ((Float, Float) -> Unit)? = null
 
-    // Volume listeners for UI updates
-    var onVolumeChanged: ((Float, Float) -> Unit)? = null
-
     // State
     var isInitialized = false
         private set

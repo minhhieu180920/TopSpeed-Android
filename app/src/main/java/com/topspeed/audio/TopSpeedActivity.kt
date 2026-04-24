@@ -4,9 +4,8 @@ import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.GestureDescription
 import android.accessibilityservice.GestureDescription.StrokeDescription
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
-import android.content.res.Configuration
-import android.content.res.Configuration
 import android.content.res.Configuration
 import android.graphics.Path
 import android.hardware.Sensor
@@ -19,6 +18,7 @@ import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
+import android.view.WindowManager
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityManager
 import android.widget.EditText
@@ -34,11 +34,8 @@ import com.topspeed.audio.game.GameState
 import com.topspeed.audio.input.GestureController
 import com.topspeed.audio.input.TiltController
 import com.topspeed.audio.network.MultiplayerManager
-import com.topspeed.audio.network.ServerConfig
 import com.topspeed.audio.network.RoomInfo
-import com.topspeed.audio.network.UserPreferences
-import android.content.Intent
-import android.content.Intent
+import com.topspeed.audio.network.ServerConfig
 import com.topspeed.audio.network.UserPreferences
 
 /**
@@ -91,9 +88,6 @@ class TopSpeedActivity : AppCompatActivity(), SensorEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i(TAG, "Activity onCreate")
-
-        // Set singleton instance
-        instance = this
 
         // Set singleton instance
         instance = this
@@ -169,7 +163,7 @@ class TopSpeedActivity : AppCompatActivity(), SensorEventListener {
         setupMultiplayerListeners()
 
         // Gesture controller
-        gestureController = GestureController(this, object : GestureController.GestureListener {
+        gestureController = GestureController(object : GestureController.GestureListener {
             override fun onSingleTap(x: Float, y: Float) {
                 handleSingleTap(x, y)
             }
@@ -250,7 +244,7 @@ class TopSpeedActivity : AppCompatActivity(), SensorEventListener {
         // Double tap bên trái để đề máy/dừng xe
         if (x < screenWidth / 2) {
             if (gameLoop.gameState == GameState.RACING) {
-                if (gameLoop.isEngineRunning()) {
+                if (gameLoop.isEngineRunning) {
                     gameLoop.stopEngine()
                     ttsManager.speak("Đã tắt máy")
                 } else {
@@ -490,14 +484,6 @@ class TopSpeedActivity : AppCompatActivity(), SensorEventListener {
             multiplayerManager.setPlayerName(name)
             ttsManager.speak("Đã lưu tên người chơi: $name")
         }
-    }
-
-    /**
-     * Mở màn hình cài đặt (SettingsActivity - màn hình dọc)
-     */
-    fun openSettingsActivity() {
-        val intent = Intent(this, SettingsActivity::class.java)
-        startActivity(intent)
     }
 
     /**

@@ -1,5 +1,7 @@
 package com.topspeed.audio.game
 
+import com.topspeed.audio.track.SurfaceType
+
 /**
  * Các trạng thái của game
  */
@@ -37,14 +39,3 @@ data class LapInfo(
     val speed: Int,           // km/h
     val gear: Int
 )
-
-/**
- * Loại bề mặt đường
- */
-enum class SurfaceType {
-    ASPHALT,    // Đường nhựa
-    GRAVEL,     // Đường đá
-    WATER,      // Nước
-    SAND,       // Cát
-    SNOW        // Tuyết
-}

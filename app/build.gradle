@@ -15,17 +15,6 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++17 -frtti -fexceptions"
-                arguments "-DANDROID_STL=c++_shared"
-            }
-        }
-
-        ndk {
-            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
-        }
     }
 
     buildTypes {
@@ -35,7 +24,6 @@ android {
         }
         debug {
             debuggable true
-            jniDebuggable true
         }
     }
 
@@ -48,17 +36,9 @@ android {
         jvmTarget = '17'
     }
 
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.22.1"
-        }
-    }
-
     sourceSets {
         main {
             assets.srcDirs = ['src/main/assets']
-            jniLibs.srcDirs = ['src/main/jniLibs']
         }
     }
 
@@ -75,9 +55,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
-
-    // Oboe for high-performance audio
-    implementation 'com.google.oboe:oboe:1.8.0'
 
     // Kotlin coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'

@@ -5,7 +5,7 @@ import com.topspeed.audio.audio.AudioEngine
 import com.topspeed.audio.audio.TTSManager
 import com.topspeed.audio.car.CarModel
 import com.topspeed.audio.track.TrackModel
-import com.topspeed.audio.audio.SurfaceType
+import com.topspeed.audio.track.SurfaceType
 import com.topspeed.audio.audio.CurveDirection
 import com.topspeed.audio.audio.TrackFeature
 

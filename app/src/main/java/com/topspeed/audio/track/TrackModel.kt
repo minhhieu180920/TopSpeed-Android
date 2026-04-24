@@ -24,26 +24,6 @@ sealed class TrackFeature {
 }
 
 /**
- * Track feature cho announcements
- */
-sealed class TrackFeature {
-    abstract val position: Int
-    abstract var announced: Boolean
-
-    data class Curve(
-        override val position: Int,
-        val direction: CurveDirection,
-        override var announced: Boolean = false
-    ) : TrackFeature()
-
-    data class SurfaceChange(
-        override val position: Int,
-        val newSurface: SurfaceType,
-        override var announced: Boolean = false
-    ) : TrackFeature()
-}
-
-/**
  * Model đường đua - port từ Track.cpp của game gốc
  * Quản lý thông tin track, các đoạn đường, curves, và surface
  */

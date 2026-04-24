@@ -37,9 +37,6 @@ class MultiplayerManager(
     // Current player name from preferences
     var playerName: String = userPrefs.playerName
 
-    // Current player name from preferences
-    var playerName: String = userPrefs.playerName
-
     // Listeners
     var onPlayerJoined: ((PlayerInfo) -> Unit)? = null
     var onPlayerLeft: ((String) -> Unit)? = null
@@ -252,7 +249,7 @@ class MultiplayerManager(
      * Set server URL
      */
     fun setServerUrl(url: String) {
-        ServerConfig.currentServerUrl = url
+        ServerConfig.setServerUrl(url)
     }
 
     /**
