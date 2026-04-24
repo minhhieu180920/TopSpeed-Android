@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TopSpeed Audio Racing</string>
+
+    <!-- Menu items -->
+    <string name="menu_main">Menu chính</string>
+    <string name="menu_quick_start">Khởi động nhanh</string>
+    <string name="menu_time_trial">Thử thách thời gian</string>
+    <string name="menu_single_race">Đua đơn</string>
+    <string name="menu_multiplayer">Nhiều người chơi</string>
+    <string name="menu_options">Tùy chọn</string>
+    <string name="menu_exit">Thoát</string>
+
+    <!-- Game states -->
+    <string name="state_ready">Sẵn sàng</string>
+    <string name="state_go">Bắt đầu</string>
+    <string name="state_paused">Tạm dừng</string>
+    <string name="state_finished">Hoàn thành</string>
+    <string name="state_crashed">Va chạm</string>
+
+    <!-- Race announcements -->
+    <string name="lap_complete">Hoàn thành vòng %1$d</string>
+    <string name="lap_remaining">Còn %1$d vòng</string>
+    <string name="position">Vị trí thứ %1$d</string>
+    <string name="time_elapsed">Thời gian: %1$s</string>
+    <string name="speed">Tốc độ: %1$d km/h</string>
+    <string name="gear">Số %1$d</string>
+
+    <!-- Curve warnings -->
+    <string name="curve_easy_left">Cong nhẹ trái</string>
+    <string name="curve_left">Cong trái</string>
+    <string name="curve_hard_left">Cong gắt trái</string>
+    <string name="curve_hairpin_left">Cong tóc bẹp trái</string>
+    <string name="curve_easy_right">Cong nhẹ phải</string>
+    <string name="curve_right">Cong phải</string>
+    <string name="curve_hard_right">Cong gắt phải</string>
+    <string name="curve_hairpin_right">Cong tóc bẹp phải</string>
+
+    <!-- Surface types -->
+    <string name="surface_asphalt">Đường nhựa</string>
+    <string name="surface_gravel">Đường đá</string>
+    <string name="surface_water">Nước</string>
+    <string name="surface_sand">Cát</string>
+    <string name="surface_snow">Tuyết</string>
+
+    <!-- Controls help -->
+    <string name="help_title">Hướng dẫn điều khiển</string>
+    <string name="help_tilt_left_right">Nghiêng điện thoại trái/phải để rẽ</string>
+    <string name="help_tap_left">Chạm bên trái màn hình để tăng tốc</string>
+    <string name="help_swipe_down">Vuốt xuống để phanh</string>
+    <string name="help_double_tap">Chạm đúp bên trái để đề máy/dừng xe</string>
+    <string name="help_three_finger_swipe_up">Vuốt 3 ngón lên để mở menu</string>
+    <string name="help_two_finger_tap">Chạm 2 ngón để tạm dừng</string>
+
+    <!-- Accessibility -->
+    <string name="accessibility_enabled">Chế độ truy cập đã bật</string>
+    <string name="talkback_mode">Chế độ TalkBack</string>
+
+    <!-- Numbers for TTS -->
+    <string-array name="numbers">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>

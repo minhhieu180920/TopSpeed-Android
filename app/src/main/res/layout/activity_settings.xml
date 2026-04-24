@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài Đặt"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Player Name Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên người chơi"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/editPlayerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên của bạn"
+            android:textColor="#ffffff"
+            android:textColorHint="#666666"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:imeOptions="actionDone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên sẽ hiển thị khi chơi multiplayer"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- TTS Volume -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Âm lượng TTS"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarTTS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="80"
+                android:progressTint="#4CAF50"
+                android:thumbTint="#4CAF50"/>
+
+            <TextView
+                android:id="@+id/textTTSValue"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="80%"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <!-- Music Volume -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Âm lượng nhạc"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarMusic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="70"
+                android:progressTint="#2196F3"
+                android:thumbTint="#2196F3"/>
+
+            <TextView
+                android:id="@+id/textMusicValue"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="70%"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <!-- SFX Volume -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Âm lượng hiệu ứng"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <SeekBar
+                android:id="@+id/seekBarSFX"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="80"
+                android:progressTint="#FF9800"
+                android:thumbTint="#FF9800"/>
+
+            <TextView
+                android:id="@+id/textSFXValue"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="80%"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lưu Cài Đặt"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#4CAF50"/>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quay Lại"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#666666"/>
+
+    </LinearLayout>
+</ScrollView>
